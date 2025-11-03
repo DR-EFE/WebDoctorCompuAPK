@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="title">Médico Virtual - Tu PC Funcionando Como Nuevo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script src="Js/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-background-light font-display text-text-body">
+
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#inicio" class="flex items-center text-2xl font-bold text-primary">
+                        <span class="material-symbols-outlined align-middle mr-2">laptop_mac</span>
+                        <span data-key="navLogo">Médico Virtual</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beneficios" class="text-text-body hover:text-primary transition" data-key="navBeneficios">Beneficios</a>
+                    <a href="#como-funciona" class="text-text-body hover:text-primary transition" data-key="navComoFunciona">Cómo Funciona</a>
+                    <a href="#resultados" class="text-text-body hover:text-primary transition" data-key="navResultados">Resultados</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <button id="lang-en" class="text-sm font-bold text-primary transition-opacity duration-200">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button id="lang-es" class="text-sm font-bold text-text-body transition-opacity duration-200 opacity-60">ES</button>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition transform hover:scale-105" data-key="navDescargar">
+                        Descargar Gratis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-text-headings mb-6 leading-tight" data-key="heroTitle">
+                        Tu PC Funcionando<br>
+                        <span class="text-primary">Como Nuevo</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-text-body" data-key="heroSubtitle">
+                        Resuelve cualquier problema de tu computadora en minutos, sin ser experto en tecnología
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition transform hover:scale-105 pulse-glow flex items-center justify-center" data-key="heroBtnDownload">
+                            <span class="material-symbols-outlined align-middle mr-2">download</span>Descargar Ahora
+                        </button>
+                        <button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary hover:text-white transition" data-key="heroBtnDemo">
+                            Ver Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative float">
+                    <div class="bg-white/10 rounded-xl p-8">
+                        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+                            <div class="bg-primary p-4 flex items-center gap-3">
+                                <div class="flex gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <span class="text-white font-semibold" data-key="diagTitle">Diagnóstico en Progreso...</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <span class="material-symbols-outlined !text-5xl text-primary">manage_search</span>
+                                    <div>
+                                        <p class="font-semibold text-text-headings" data-key="diagAnalyzing">Analizando tu PC</p>
+                                        <p class="text-sm text-text-body" data-key="diagDetecting">Detectando problemas...</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 75%; animation: progress 2s ease-in-out infinite;"></div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 text-sm">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                        <span class="text-text-body" data-key="diagRam">RAM verificada</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                        <span class="text-text-body" data-key="diagDisk">Disco revisado</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-yellow-500">autorenew</span>
+                                        <span class="text-text-body" data-key="diagNetwork">Red en análisis</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-blue-500">sync</span>
+                                        <span class="text-text-body" data-key="diagOs">Sistema operativo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4" data-key="stepsTitle">
+                    Arregla Tu PC en <span class="text-primary">3 Pasos Simples</span>
+                </h2>
+                <p class="text-xl text-text-body max-w-2xl mx-auto" data-key="stepsSubtitle">
+                    No necesitas ser técnico. Solo responde preguntas simples y obtén soluciones instantáneas
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-xl bg-white card-hover fade-in">
+                    <span class="material-symbols-outlined !text-6xl mb-4 text-primary">my_location</span>
+                    <h3 class="text-2xl font-bold text-text-headings mb-4" data-key="step1Title">Describe el Problema</h3>
+                    <p class="text-text-body text-lg" data-key="step1Desc">
+                        Elige entre 10 situaciones comunes. ¿Tu PC no enciende? ¿Va lenta? Tenemos la solución
+                    </p>
+                </div>
+
+                <div class="text-center p-8 rounded-xl bg-white card-hover fade-in" style="transition-delay: 0.1s;">
+                    <span class="material-symbols-outlined !text-6xl mb-4 text-primary">question_answer</span>
+                    <h3 class="text-2xl font-bold text-text-headings mb-4" data-key="step2Title">Responde Preguntas</h3>
+                    <p class="text-text-body text-lg" data-key="step2Desc">
+                        Preguntas simples en lenguaje cotidiano. Sin tecnicismos, sin complicaciones
+                    </p>
+                </div>
+
+                <div class="text-center p-8 rounded-xl bg-white card-hover fade-in" style="transition-delay: 0.2s;">
+                    <span class="material-symbols-outlined !text-6xl mb-4 text-primary">auto_awesome</span>
+                    <h3 class="text-2xl font-bold text-text-headings mb-4" data-key="step3Title">Recibe Tu Plan</h3>
+                    <p class="text-text-body text-lg" data-key="step3Desc">
+                        Lista paso a paso con instrucciones claras y videos explicativos para solucionar todo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="py-20 bg-background-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4" data-key="featuresTitle">
+                    Todo lo que Puedes <span class="text-primary">Resolver</span>
+                </h2>
+                <p class="text-xl text-text-body max-w-2xl mx-auto" data-key="featuresSubtitle">
+                    Los problemas más comunes de PC, todos en una app
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">power_off</span>
+                    <p class="font-semibold text-text-headings" data-key="feature1">No enciende</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">hourglass_empty</span>
+                    <p class="font-semibold text-text-headings" data-key="feature2">Va muy lenta</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">desktop_windows</span>
+                    <p class="font-semibold text-text-headings" data-key="feature3">Pantalla azul</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">wifi_off</span>
+                    <p class="font-semibold text-text-headings" data-key="feature4">Sin internet</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">local_fire_department</span>
+                    <p class="font-semibold text-text-headings" data-key="feature5">Sobrecalentamiento</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">ac_unit</span>
+                    <p class="font-semibold text-text-headings" data-key="feature6">Se congela</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">graphic_eq</span>
+                    <p class="font-semibold text-text-headings" data-key="feature7">Ruidos extraños</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">app_blocking</span>
+                    <p class="font-semibold text-text-headings" data-key="feature8">Apps no abren</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">desktop_access_disabled</span>
+                    <p class="font-semibold text-text-headings" data-key="feature9">Pantalla negra</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
+                    <span class="material-symbols-outlined !text-5xl mb-3 text-primary">power_settings_new</span>
+                    <p class="font-semibold text-text-headings" data-key="feature10">Apagados aleatorios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4" data-key="resultsTitle">
+                    Resultados que <span class="text-primary">Puedes Ver</span>
+                </h2>
+                <p class="text-xl text-text-body max-w-2xl mx-auto" data-key="resultsSubtitle">
+                    No solo son números, es tu progreso hacia una PC más rápida y estable
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="bg-background-light p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-text-headings mb-6 text-center" data-key="chartTitle">Problemas Resueltos por Gravedad</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="resultsChart"></canvas>
+                        </div>
+                        <div class="mt-6 bg-white p-4 rounded-xl">
+                            <p class="text-sm text-text-body text-center flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary mr-2">lightbulb</span> 
+                                <span data-key="chartTooltip"><strong class="text-text-headings mr-1">Esto significa:</strong> La mayoría de los problemas se pueden resolver sin ayuda técnica profesional.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 fade-in">
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-red-500 shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined !text-4xl text-red-500">error</span>
+                            <div>
+                                <h4 class="font-bold text-text-headings mb-2" data-key="resultsSevereTitle">Problemas Graves</h4>
+                                <p class="text-text-body" data-key="resultsSevereDesc">PC no enciende o no da video. Requieren atención inmediata</p>
+                                <p class="text-sm text-red-600 font-semibold mt-2" data-key="resultsSevereCases">1 de cada 5 casos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-yellow-500 shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined !text-4xl text-yellow-500">warning</span>
+                            <div>
+                                <h4 class="font-bold text-text-headings mb-2" data-key="resultsMediumTitle">Problemas Medios</h4>
+                                <p class="text-text-body" data-key="resultsMediumDesc">Lentitud, pantallas azules, congelamientos. Solución en minutos</p>
+                                <p class="text-sm text-yellow-600 font-semibold mt-2" data-key="resultsMediumCases">3 de cada 5 casos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined !text-4xl text-green-500">check_circle</span>
+                            <div>
+                                <h4 class="font-bold text-text-headings mb-2" data-key="resultsLightTitle">Problemas Leves</h4>
+                                <p class="text-text-body" data-key="resultsLightDesc">Configuraciones simples que arreglas tú mismo en segundos</p>
+                                <p class="text-sm text-green-600 font-semibold mt-2" data-key="resultsLightCases">1 de cada 5 casos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-6" data-key="ctaTitle">
+                    ¿Listo para Arreglar Tu PC?
+                </h2>
+                <p class="text-xl text-text-body mb-8 max-w-2xl mx-auto" data-key="ctaSubtitle">
+                    Descarga Médico Virtual gratis y resuelve cualquier problema en minutos. Sin complicaciones, sin costos ocultos
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <button class="bg-primary text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition transform hover:scale-105 pulse-glow flex items-center justify-center" data-key="ctaButton">
+                        <span class="material-symbols-outlined align-middle mr-2">smartphone</span> Descargar para Android
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-center gap-8 text-sm text-text-body">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-green-500">check</span>
+                        <span data-key="ctaTag1">100% Gratis</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-green-500">check</span>
+                        <span data-key="ctaTag2">Sin Anuncios</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-green-500">check</span>
+                        <span data-key="ctaTag3">Funciona Sin Internet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-background-dark text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center text-2xl font-bold text-primary mb-4">
+                <span class="material-symbols-outlined align-middle mr-2">laptop_mac</span>
+                <span data-key="footerLogo">Médico Virtual</span>
+            </div>
+            <p class="mb-4" data-key="footerSubtitle">Tu PC funcionando como nuevo, siempre</p>
+            <p class="text-sm" data-key="footerRights">&copy; 2025 Médico Virtual. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="Js/script.js"></script>
+</body>
+</html>
